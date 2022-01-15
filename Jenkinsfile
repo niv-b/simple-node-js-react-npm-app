@@ -1,5 +1,9 @@
 pipeline {
-  agent 'aws-test'
+  agent {
+    node {
+        label 'aws-test'
+    }
+}
     
   tools {nodejs "NodeJS"}
     
