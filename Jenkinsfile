@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent 'aws-test'
     
   tools {nodejs "NodeJS"}
     
@@ -7,13 +7,13 @@ pipeline {
         
     stage('Git') {
       steps {
-        git 'https://github.com/niv-b/simple-node-js-react-npm-app.git'
+        checkout scm
       }
     }
      
     stage('Build') {
       steps {
-        sh 'npm install'
+        sh 'npm'
       }
     }  
             
