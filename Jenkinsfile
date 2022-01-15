@@ -1,8 +1,6 @@
 pipeline {
   agent {
-    node {
-        label 'aws-test'
-    }
+    docker { image 'node:16.3.1-alpine' }
 }
     
   tools {nodejs "NodeJS"}
