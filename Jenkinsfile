@@ -2,9 +2,7 @@ pipeline {
   agent {
     docker { image 'node:16.3.1-alpine' }
 }
-    
-  tools {nodejs "NodeJS"}
-    
+        
   stages {
         
     stage('Git') {
